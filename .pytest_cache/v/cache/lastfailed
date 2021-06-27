@@ -1,0 +1,3 @@
+{
+  "tests/test_account_name.py::test_account_name_negative2": true
+}

@@ -1,0 +1,22 @@
+[
+  "tests/test_account_name.py::test_account_name_negative1",
+  "tests/test_account_name.py::test_account_name_negative2",
+  "tests/test_account_name.py::test_account_name_positive",
+  "tests/test_account_number.py::test_account_number_negative1",
+  "tests/test_account_number.py::test_account_number_negative2",
+  "tests/test_account_number.py::test_account_number_negative3",
+  "tests/test_account_number.py::test_account_number_negative4",
+  "tests/test_account_number.py::test_account_number_positive1",
+  "tests/test_account_number.py::test_account_number_positive2",
+  "tests/test_account_number.py::test_account_number_positive3",
+  "tests/test_bank_country_code.py::test_bank_country_code_negative1",
+  "tests/test_bank_country_code.py::test_bank_country_code_negative2",
+  "tests/test_bank_country_code.py::test_bank_country_code_positive",
+  "tests/test_bank_country_code.py::test_bank_country_code_positive1",
+  "tests/test_bank_country_code.py::test_bank_country_code_positive2",
+  "tests/test_bank_country_code.py::test_bank_country_code_positive3",
+  "tests/test_payment_method.py::test_payment_nethod_negative1",
+  "tests/test_payment_method.py::test_payment_nethod_negative2",
+  "tests/test_payment_method.py::test_payment_nethod_positive1",
+  "tests/test_payment_method.py::test_payment_nethod_positive2"
+]

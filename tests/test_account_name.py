@@ -30,3 +30,5 @@ def test_account_name_negative2():
     data, status = request_get.request_get("api-demo.airwallex.com", "/api/v1/beneficiaries/create", payload, headers)
     print(data)
     assert status == 400
+
+

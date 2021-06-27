@@ -68,3 +68,15 @@ def test_account_number_negative3():
         assert dict_data['message'] == 'Should contain 8 to 34 characters'
         assert dict_data['source'] == 'beneficiary.bank_details.account_number'
     assert status == 400
+
+def test_account_number_negative4():
+    payload = generate_payload(account_name="John Walker", account_number="", account_routing_type1="cnaps", account_routing_value1="021000021", \
+                               bank_country_code="CN", bank_name="JP Morgan Chase Bank", payment_methods="SWIFT", swift_code="PCBCCNBJSZX")
+    headers = generate_headers()
+    data, status = request_get.request_get("api-demo.airwallex.com", "/api/v1/beneficiaries/create", payload, headers)
+    dict_data = json.loads(data)
+    if status == 400:
+        assert dict_data['code'] == 'payment_schema_validation_failed'
+        assert dict_data['message'] == 'This field is required'
+        assert dict_data['source'] == 'beneficiary.bank_details.account_number'
+    assert status == 400

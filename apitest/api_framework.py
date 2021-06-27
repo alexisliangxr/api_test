@@ -54,7 +54,6 @@ def new_token():
     return token
 
 def generate_headers():
-    # token = token_get(request_token)
     token = new_token()
     headers = {
     "Authorization": "Bearer %s" % token,
@@ -76,8 +75,6 @@ def framework_run():
     """api test run"""
     payload = generate_payload(account_name="Lee Da Ming", account_number="12750852", account_routing_type1="bsb", account_routing_value1="083064", \
                                bank_country_code="AU", bank_name="National Australia Bank", payment_methods="SWIFT", swift_code="NATAAU3302S")
-    # (account_name="John Walker", account_number="50001121", account_routing_type1="aba", account_routing_value1="021000021", \
-                              #  bank_country_code="US", bank_name="JP Morgan Chase Bank", payment_methods="LOCAL") 
     headers = generate_headers()
     data, status = request_get.request_get("api-demo.airwallex.com", "/api/v1/beneficiaries/create", payload, headers)
     print(status)
@@ -86,5 +83,5 @@ def framework_run():
       print(dict_data['beneficiary']['bank_details']['account_routing_type1'])
     return data
 
-# print(framework_run())
+
 # /Users/liang/Library/Python/3.9/bin/pytest --version
